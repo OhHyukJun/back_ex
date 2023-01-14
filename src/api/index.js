@@ -11,12 +11,14 @@
     라우터를 여러 파일에 분리시켜서 작성하고, 이를 불러와 적용하는 방법을 학습할 것임
 */
 
-const Router = require('koa-router');
-const posts = require('./posts');
+//const Router = require('koa-router');
+//const posts = require('./posts');
+import Router from 'koa-router';
+import posts from './posts';
 
 const api = new Router();
 
 api.use('/posts' , posts.routes());
 
 //라우터를 내보냄
-module.exports = api;
+export default api;
