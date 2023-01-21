@@ -11,6 +11,7 @@ posts.get('/',postsCtrl.list);
 posts.post('/',postsCtrl.write);
 
 const post = new Router(); 
+
 posts.get('/:id',postsCtrl.read);
 posts.delete('/:id',postsCtrl.remove);
 //posts.put('/:id',postsCtrl.replace);
